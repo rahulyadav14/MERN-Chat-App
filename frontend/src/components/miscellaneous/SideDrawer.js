@@ -43,7 +43,7 @@ const SideDrawer = () => {
 
   const logoutHandler = () => {
     localStorage.removeItem("userInfo");
-    navigate("/");
+    navigate("mern-chat-app-production-2798.up.railway.app/");
   };
  const toast = useToast();
 

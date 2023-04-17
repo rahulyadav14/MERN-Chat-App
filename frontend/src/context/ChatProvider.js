@@ -15,7 +15,7 @@ const ChatProvider = ({ children }) => {
     const userInfo = JSON.parse(localStorage.getItem("userInfo"));
     setUser(userInfo);
 
-    if (!userInfo) navigate("/");
+    if (!userInfo) navigate("mern-chat-app-production-2798.up.railway.app/");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [navigate]); //history
 

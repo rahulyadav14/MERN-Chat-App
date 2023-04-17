@@ -57,7 +57,7 @@ const Login = () => {
       });
       localStorage.setItem("userInfo",JSON.stringify(data));
       setLoading(false);
-      navigate("/chats");
+      navigate("mern-chat-app-production-2798.up.railway.app/chats");
     }catch(error){
       toast({
         title:"Error Occured!",
