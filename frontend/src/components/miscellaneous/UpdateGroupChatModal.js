@@ -46,7 +46,7 @@ const UpdateGroupChatModal = ({ fetchMessages,fetchAgain, setFetchAgain }) => {
         },
       };
       const { data } = await axios.put(
-        `/api/chat/groupremove`,
+        `mern-chat-app-production-2798.up.railway.app/api/chat/groupremove`,
         {
           chatId: selectedChat._id,
           userId: user1._id,
@@ -82,7 +82,7 @@ const UpdateGroupChatModal = ({ fetchMessages,fetchAgain, setFetchAgain }) => {
         },
       };
       const { data } = await axios.put(
-        `/api/chat/rename`,
+        `mern-chat-app-production-2798.up.railway.app/api/chat/rename`,
         {
           chatId: selectedChat._id,
           chatName: groupChatName,
@@ -121,7 +121,10 @@ const UpdateGroupChatModal = ({ fetchMessages,fetchAgain, setFetchAgain }) => {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.get(`/api/user?search=${search}`, config);
+      const { data } = await axios.get(
+        `mern-chat-app-production-2798.up.railway.app/api/user?search=${search}`,
+        config
+      );
       console.log(data);
       setLoading(false);
       setSearchResult(data);
@@ -168,7 +171,7 @@ const handleAddUser = async (user1) => {
       },
     };
     const { data } = await axios.put(
-      `/api/chat/groupadd`,
+      `mern-chat-app-production-2798.up.railway.app/api/chat/groupadd`,
       {
         chatId: selectedChat._id,
         userId: user1._id,

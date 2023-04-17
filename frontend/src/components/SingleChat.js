@@ -49,7 +49,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         setLoading(true);
 
         const { data } = await axios.get(
-          `/api/message/${selectedChat._id}`,
+          `mern-chat-app-production-2798.up.railway.app/api/message/${selectedChat._id}`,
           config
         );
 
@@ -111,12 +111,13 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
              },
            }; 
             setNewMessage("");
-           const {data} = await axios.post('/api/message',
-           {
-            content:newMessage,
-            chatId:selectedChat._id,
-           },
-           config
+           const { data } = await axios.post(
+             "mern-chat-app-production-2798.up.railway.app/api/message",
+             {
+               content: newMessage,
+               chatId: selectedChat._id,
+             },
+             config
            );
            //console.log(data);
           
