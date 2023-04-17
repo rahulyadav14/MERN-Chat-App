@@ -104,7 +104,7 @@ const Signup = () => {
       };
 
       const { data } = await axios.post(
-        "/api/user",
+        "mern-chat-app-production-2798.up.railway.app/api/user",
         { name, email, password, pic },
         config
       );

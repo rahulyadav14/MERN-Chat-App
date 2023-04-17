@@ -44,11 +44,11 @@ const Login = () => {
         "Content-type":"application/json",
       },
     };
-    const {data} = await axios.post(
-      "/api/user/login",
-      {email,password},
+    const { data } = await axios.post(
+      "mern-chat-app-production-2798.up.railway.app/api/user/login",
+      { email, password },
       config
-      );
+    );
       toast({
         title:"Login Successful",
         status:"success",
