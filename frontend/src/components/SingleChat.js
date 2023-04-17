@@ -11,9 +11,9 @@ import "./styles.css";
 import io from "socket.io-client";
 import Lottie, {} from 'react-lottie';
 import animationData from "../animations/typing.json";
-const ENDPOINT = "https://localhost:5000";
+const ENDPOINT = "mern-chat-app-production-2798.up.railway.app";
 var socket, selectedChatCompare;
-
+//https://localhost:5000
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
