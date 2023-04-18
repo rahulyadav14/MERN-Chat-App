@@ -69,7 +69,7 @@ const SideDrawer = () => {
       };
 
       const { data } = await axios.get(
-        `mern-chat-app-production-2798.up.railway.app/api/user?search=${search}`,
+        `/api/user?search=${search}`,
         config
       );
       
@@ -99,7 +99,7 @@ const SideDrawer = () => {
       };
 
       const { data } = await axios.post(
-        "mern-chat-app-production-2798.up.railway.app/api/chat",
+        "/api/chat",
         { userId },
         config
       );

@@ -59,7 +59,7 @@ const GroupChatModal = ({children}) => {
         },
       };
       const { data } = await axios.get(
-        `mern-chat-app-production-2798.up.railway.app/api/user?search=${search}`,
+        `/api/user?search=${search}`,
         config
       );
       //console.log(data);
@@ -100,7 +100,7 @@ const GroupChatModal = ({children}) => {
         },
       };
       const { data } = await axios.post(
-        "mern-chat-app-production-2798.up.railway.app/api/chat/group",
+        "/api/chat/group",
         {
           name: groupChatName,
           users: JSON.stringify(selectedUsers.map((u) => u._id)),

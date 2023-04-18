@@ -30,7 +30,7 @@ const MyChats = ({ fetchAgain }) => {
       };
 
       const { data } = await axios.get(
-        "http://mern-chat-app-production-2798.up.railway.app/api/chat",
+        "/api/chat",
         config
       );
       console.log(data);
