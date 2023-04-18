@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {
   FormControl,
   FormLabel,
@@ -24,47 +24,47 @@ const Login = () => {
   const handleClick = () => setShow(!show);
   const navigate = useNavigate();
 
-  const submitHandler = async() => {
+  const submitHandler = async () => {
     setLoading(true);
-    if(!email || !password) {
+    if (!email || !password) {
       toast({
-        title:"Please fill all the Feilds",
-        status:"warning",
+        title: "Please fill all the Feilds",
+        status: "warning",
         duration: 5000,
         isClosable: true,
-        position:"bottom",
-      })
+        position: "bottom",
+      });
       setLoading(false);
       return;
     }
 
-    try{
-      const config ={ 
-        headers:{
-        "Content-type":"application/json",
-      },
-    };
-    const { data } = await axios.post(
-      "mern-chat-app-production-2798.up.railway.app/api/user/login",
-      { email, password },
-      config
-    );
+    try {
+      const config = {
+        headers: {
+          "Content-type": "application/json",
+        },
+      };
+      const { data } = await axios.post(
+        "mern-chat-app-production-2798.up.railway.app/api/user/login",
+        { email, password },
+        config
+      );
       toast({
-        title:"Login Successful",
-        status:"success",
-        isClosable:true,
-        position:"bottom",
+        title: "Login Successful",
+        status: "success",
+        isClosable: true,
+        position: "bottom",
       });
-      localStorage.setItem("userInfo",JSON.stringify(data));
+      localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
       navigate("mern-chat-app-production-2798.up.railway.app/chats");
-    }catch(error){
+    } catch (error) {
       toast({
-        title:"Error Occured!",
+        title: "Error Occured!",
         description: error.response.data.message,
-        status:"error",
-        duration:5000,
-        isClosable:true,
+        status: "error",
+        duration: 5000,
+        isClosable: true,
         position: "bottom",
       });
       setLoading(false);
@@ -121,6 +121,6 @@ const Login = () => {
       </Button>
     </VStack>
   );
-}
+};
 
-export default Login
+export default Login;

@@ -1,12 +1,12 @@
-import { Box, Button, Text,effect, Stack, useToast } from "@chakra-ui/react";
+import { Box, Button, Text, effect, Stack, useToast } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { ChatState } from "../../context/ChatProvider";
 import axios from "axios";
 import { AddIcon } from "@chakra-ui/icons";
 import ChatLoading from "./ChatLoading";
 import { getSender } from "../../config/ChatLogics";
-import GroupChatModal  from "./GroupChatModal";
-const MyChats = ({fetchAgain}) => {
+import GroupChatModal from "./GroupChatModal";
+const MyChats = ({ fetchAgain }) => {
   const [loggedUser, setLoggedUser] = useState();
   const {
     selectedChat,
@@ -30,7 +30,7 @@ const MyChats = ({fetchAgain}) => {
       };
 
       const { data } = await axios.get(
-        "mern-chat-app-production-2798.up.railway.app/api/chat",
+        "http://mern-chat-app-production-2798.up.railway.app/api/chat",
         config
       );
       console.log(data);
@@ -74,14 +74,14 @@ const MyChats = ({fetchAgain}) => {
       >
         MyChats
         <GroupChatModal>
-        <Button
-          display="flex"
-          fontSize={{ base: "17px", md: "10px", lg: "17px" }}
-          rightIcon={<AddIcon />}
-        >
-          New Group Chat
-        </Button>
-       </GroupChatModal>
+          <Button
+            display="flex"
+            fontSize={{ base: "17px", md: "10px", lg: "17px" }}
+            rightIcon={<AddIcon />}
+          >
+            New Group Chat
+          </Button>
+        </GroupChatModal>
       </Box>
 
       <Box
