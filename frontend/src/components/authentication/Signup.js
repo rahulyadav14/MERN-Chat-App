@@ -119,7 +119,7 @@ const Signup = () => {
       localStorage.setItem("userInfo", JSON.stringify(data));
       setLoading(false);
       //history.push("/chats");
-      navigate("mern-chat-app-production-2798.up.railway.app/chats");
+      navigate("/chats");
     } catch (error) {
       toast({
         title: "Error Occured!",
